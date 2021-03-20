@@ -63,17 +63,15 @@ public class BooksFragment extends Fragment implements BooksAdapter.OnClickBook 
             public void onChanged(Resource<List<BooksResponse>> listResource) {
 
                 switch (listResource.getStatus()){
-                    case CARREGANDO:
+                    case LOADING:
                         showProgressBar();
                         hideImageSearchBook();
                         break;
-                    case SUCESSO:
+                    case SUCESS:
                         hideProgressBar();
                         showBooks(listResource.getData());
                         break;
                 }
-
-
             }
         });
 
@@ -81,10 +79,8 @@ public class BooksFragment extends Fragment implements BooksAdapter.OnClickBook 
             @Override
             public void onChanged(List<Favorite> favoriteList) {
                 // retrieve favorite list to compare with book database
-
             }
         });
-
 
 
         return view;

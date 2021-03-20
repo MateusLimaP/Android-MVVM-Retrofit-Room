@@ -37,7 +37,7 @@ public class BooksRepository {
     }
 
     public void pesquisarLivro(String pesquisa){
-        responseList.setValue(Resource.<List<BooksResponse>>carregando());
+        responseList.setValue(Resource.<List<BooksResponse>>loading());
         ApiServices.getInstance().getLivros(pesquisa)
                 .enqueue(new Callback<BooksResult>() {
                     @Override

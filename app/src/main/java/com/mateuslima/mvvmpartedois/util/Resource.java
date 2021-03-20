@@ -13,15 +13,15 @@ public class Resource<T> {
     }
 
     public static  <T> Resource <T> sucess(T data){
-        return new Resource<>(Status.SUCESSO, data, null);
+        return new Resource<>(Status.SUCESS, data, null);
     }
 
     public static <T> Resource <T> erro(String mensagem, T data){
         return new Resource<>(Status.ERRO, data, mensagem);
     }
 
-    public static <T> Resource <T> carregando(){
-        return new Resource<>(Status.CARREGANDO, null, null);
+    public static <T> Resource <T> loading(){
+        return new Resource<>(Status.LOADING, null, null);
     }
 
     public T getData() {
@@ -37,6 +37,6 @@ public class Resource<T> {
     }
 
     public enum Status{
-        SUCESSO, ERRO, CARREGANDO
+        SUCESS, ERRO, LOADING
     }
 }
