@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_book"
+    app:startDestination="@id/booksFragment">
+
+    <fragment
+        android:id="@+id/booksFragment"
+        android:label="Search Books"
+        android:name="com.mateuslima.mvvmpartedois.ui.books.BooksFragment"
+        tools:layout="@layout/fragment_books" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.mateuslima.mvvmpartedois.ui.favorite.FavoriteFragment"
+        tools:layout="@layout/fragment_favorite"/>
+
+</navigation>
